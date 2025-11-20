@@ -4,49 +4,32 @@
  */
 package edutrack;
 
+import java.time.LocalDate;
+
 /**
  *
  * @author pc
  */
-public class Administrador extends Usuario{
-    private String idAdministrador;
-    private String correoinstitucional;
-    private String contrasena;
-    private String telefono;
-    private String estadocuenta;
-    private String fecharegistro;
-    private String direccion;
-    private String idUsuario;
+public class Administrador extends Usuario {
     
-    public Administrador (String idAdministrador, String nombre, String apellido,
-            String correoinstitucional, String contrasena, String telefono, String estadocuenta, 
-            String fecharegistro, String direccion, String idUsuario)
-    {
-      this.idAdministrador = idAdministrador;
-      this.correoinstitucional = correoinstitucional;
-      this.contrasena = contrasena;
-      this.telefono = telefono;
-      this.estadocuenta = estadocuenta;
-      this.fecharegistro = fecharegistro;
-      this.direccion = direccion; 
-      this.idUsuario = idUsuario;
+    private String direccion;
+    private int idAdministrador;
+
+    public Administrador(int idUsuario, String nombre, String apellido, String correo, String contraseña,
+                         String telefono, boolean estadoCuenta, LocalDate fechaRegistro,
+                         String documento, LocalDate fechaNacimiento, Rol rol) {
+
+        super(idUsuario, nombre, apellido, correo, contraseña, telefono, estadoCuenta,
+                fechaRegistro, documento, fechaNacimiento, rol);
+        
+        this.direccion = direccion;
+         this.idAdministrador = idAdministrador;
+        
     }
     
-    public String getIdAdministrador()
-    { return idAdministrador;}
-    public String getCorreoinstitucional()
-    { return correoinstitucional; }
-    public String getContrasena()
-    {return contrasena; }
-    public String telefono()
-    { return telefono; }
-    public String estadocuenta()
-    { return estadocuenta; }
-     public String fecharegistro()
-    { return fecharegistro; }
-      public String direccion()
-    { return direccion; }
-       public String idUsuario()
-    { return idUsuario; }
-
+     public String getDireccion() { return direccion; }
+    public void setDireccion(String direccion) { this.direccion = direccion; }
+    
+    public int getIdAdministrador() { return idAdministrador; }
+    public void setIdAdministrador(int idAdministrador) { this.idAdministrador = idAdministrador; }
 }
