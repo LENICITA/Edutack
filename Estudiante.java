@@ -3,8 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package edutrack;
-import java.util.List;
-import edutrack.Observaciones;
 
 /**
  *
@@ -49,7 +47,4 @@ public class Estudiante extends Usuario{
         this.curso = curso;
         this.direccion = direccion;
         this.id_usuario = id_usuario;
-        
-        public List<Observaciones>
-                verObservaciones() {}
     }

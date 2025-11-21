@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package edutrack;
-import java.time.LocalDate
 
 /**
  *
@@ -11,22 +10,12 @@ import java.time.LocalDate
  */
 public class Reporte {
 
-    private int IdReporte;
-    private String tipoReporte;
-    private String descripcion;
-    private LocalDate fechaemision;
-    private String estado;
-    private Docente docente;
-   
-    public Reporte(String tipoReporte, String descripcion, Docente docente) {
-        this.tipoReporte = tipoReporte;
-        this.descripcion = descripcion;
-        this.docente = docente;
-        this.fechaemision = LocalDate.now();
-        this.estado = estado;
+    public static double calcularPromedio(List<Nota> notas) {
+        return notas.stream().mapToDouble(Nota::getValor).average().orElse(0);
     }
-    
-    public void 
-  aprobarReporte(Administrador)
-} 
+
+    public static long contarInasistencias(List<Asistencia> lista) {
+        return lista.stream().filter(a -> !a.isPresente()).count();
+    }
+}
 

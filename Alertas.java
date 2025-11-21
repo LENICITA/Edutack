@@ -8,10 +8,6 @@ package edutrack;
  *
  * @author pc
  */
-// Padre
-public class Padre extends Usuario {
-
-    public Padre(String id, String nombre, String correo, String contrasena) {
-        super(id, nombre, correo, contrasena, Rol.PADRE);
-    }
+public class Alertas {
+    
 }

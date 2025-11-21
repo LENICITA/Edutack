@@ -9,6 +9,5 @@ package edutrack;
  * @author pc
  */
 public class Docente {
-    public void 
-            crearObervacion(Estudiante estudiante, String descripcion) {}
+    
 }
