@@ -8,6 +8,7 @@ package edutrack;
  *
  * @author pc
  */
-public class Observaciones {
-    
+// Rol.java
+public enum Rol {
+    ADMINISTRADOR, DOCENTE, ESTUDIANTE, PADRE
 }
