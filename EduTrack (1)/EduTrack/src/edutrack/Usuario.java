@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package edutrack;
-import java.time.LocalDate;
 /**
  *
  * @author pc
@@ -18,16 +17,16 @@ public class Usuario {
     protected String telefono;
     // true = activo, false = inactivo
     protected boolean estadoCuenta;        
-    protected LocalDate fechaRegistro;
+    protected String fechaRegistro;
     protected String documento;
-    protected LocalDate fechaNacimiento;
+    protected String fechaNacimiento;
     protected Rol rol;
 
     public Usuario() {}
 
     public Usuario(int idUsuario, String nombre, String apellido, String correo, String contraseña,
-                   String telefono, boolean estadoCuenta, LocalDate fechaRegistro,
-                   String documento, LocalDate fechaNacimiento, Rol rol) {
+                   String telefono, boolean estadoCuenta, String fechaRegistro,
+                   String documento, String fechaNacimiento, Rol rol) {
 
         this.idUsuario = idUsuario;
         this.nombre = nombre;
@@ -63,14 +62,14 @@ public class Usuario {
     public boolean isEstadoCuenta() { return estadoCuenta; }
     public void setEstadoCuenta(boolean estadoCuenta) { this.estadoCuenta = estadoCuenta; }
 
-    public LocalDate getFechaRegistro() { return fechaRegistro; }
-    public void setFechaRegistro(LocalDate fechaRegistro) { this.fechaRegistro = fechaRegistro; }
+    public String getFechaRegistro() { return fechaRegistro; }
+    public void setFechaRegistro(String fechaRegistro) { this.fechaRegistro = fechaRegistro; }
 
     public String getDocumento() { return documento; }
     public void setDocumento(String documento) { this.documento = documento; }
 
-    public LocalDate getFechaNacimiento() { return fechaNacimiento; }
-    public void setFechaNacimiento(LocalDate fechaNacimiento) { this.fechaNacimiento = fechaNacimiento; }
+    public String getFechaNacimiento() { return fechaNacimiento; }
+    public void setFechaNacimiento(String fechaNacimiento) { this.fechaNacimiento = fechaNacimiento; }
 
     public Rol getRol() { return rol; }
     public void setRol(Rol rol) { this.rol = rol; }

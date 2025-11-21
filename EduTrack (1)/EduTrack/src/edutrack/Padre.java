@@ -4,7 +4,6 @@
  */
 package edutrack;
 
-import java.time.LocalDate;
 
 /**
  *
@@ -20,9 +19,8 @@ public class Padre extends Usuario {
     
 
     public Padre(int idUsuario, String nombre, String apellido, String correo, String contraseña,
-                 String telefono, boolean estadoCuenta, LocalDate fechaRegistro,
-                 String documento, LocalDate fechaNacimiento, Rol rol,
-                 int idEstudianteAsociado) {
+                 String telefono, boolean estadoCuenta, String fechaRegistro,
+                 String documento, String fechaNacimiento, Rol rol, int idPadre, String ocupacion, int idEstudianteAsociado, String direccion) {
 
         super(idUsuario, nombre, apellido, correo, contraseña, telefono, estadoCuenta,
                 fechaRegistro, documento, fechaNacimiento, rol);
@@ -34,6 +32,12 @@ public class Padre extends Usuario {
                 
         
     }
+
+    Padre(String idUsuario, String nombre, String apellido, String correo, String contraseña, String telefono, boolean estadoCuenta, String fechaRegistro, String documento, String fechaNacimiento, int rol, int idPadre, String ocupacion, int idEstudianteAsociado, String direccion) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+
     
     public int getIdPadre() { return idPadre; }
     public void setIdPadre(int idPadre) {
